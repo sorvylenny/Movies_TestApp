@@ -36,7 +36,6 @@ export class LoginComponent {
   getUsers(): void {
     this.loginService.getUser().subscribe(users => {
       this.users = users;
-      console.log(this.users);
     });
   }
 
@@ -57,7 +56,7 @@ export class LoginComponent {
       if (loggedInUser) {
         // If user is found, set user name to local storage, show success message, and navigate to the movie list page
         const loggedUser = loggedInUser;
-        this.loginService.setUserNameToStorage(loggedUser.userName);
+        this.loginService.setUserNameToStorage(loggedUser.userName,loggedUser.id);
 
         Swal.fire({
           icon: 'success',

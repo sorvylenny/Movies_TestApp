@@ -1,35 +1,50 @@
-<app-header></app-header> <!-- Include the app header component -->
+<app-header></app-header>
+<!-- Include the app header component -->
 <div class="example-card-container">
   <mat-card class="example-card">
     <!-- Display movie image -->
-    <img mat-card-image [src]="'assets/' + movieDetails.image" alt="{{ movieDetails.title }} image">
+    <img
+      mat-card-image
+      [src]="'assets/' + movieDetails.image"
+      alt="{{ movieDetails.title }} image"
+    />
     <!-- Display movie details -->
     <mat-card-content>
-      <mat-card-title>{{movieDetails.title| uppercase}}</mat-card-title>
-      <mat-card-subtitle>{{movieDetails.genre}}</mat-card-subtitle>
-      <mat-card-title-group>{{movieDetails.releaseDate | date:' yyyy/MM/dd '}}</mat-card-title-group>
-      <mat-card-title-group>{{movieDetails.duration}}</mat-card-title-group>
+      <mat-card-title>{{ movieDetails.title | uppercase }}</mat-card-title>
+      <mat-card-subtitle>{{ movieDetails.genre }}</mat-card-subtitle>
+      <mat-card-title-group>{{
+        movieDetails.releaseDate | date : " yyyy/MM/dd "
+      }}</mat-card-title-group>
+      <mat-card-title-group>{{ movieDetails.duration }}</mat-card-title-group>
       <!-- Button container for addtoWatch and trailer -->
       <div class="example-button-row">
         <div class="example-flex-container">
-          <button mat-icon-button
-          class="color_button"
-          [ngClass]="{'selected-button': movieDetails.selected}"
-          matTooltip="{{ movieDetails.selected ? 'Already in your watchlist' : 'Add to watchlist' }}"
-          (click)="addToWatchlist(movieDetails)"
-        >
-          <mat-icon>{{ movieDetails.selected ? 'bookmark' : 'bookmark_border' }}</mat-icon>
-        </button>
+         <button
+            mat-icon-button
+            class="color_button"
+            [ngClass]="{ 'selected-button': movieDetails.selected }"
+            matTooltip="{{
+              movieDetails.selected
+                ? 'Already in your watchlist'
+                : 'Add to watchlist'
+            }}"
+            (click)="addToWatchlist(movieDetails)"
+          >
+            <mat-icon>{{
+              movieDetails.selected ? "bookmark" : "bookmark_border"
+             }}</mat-icon>
+          </button>
 
-        <!--   <button mat-icon-button class="color_button" matTooltip="{{ movieDetails.selected ? 'Already in watchlist' : 'Add to watchlist' }}" (click)="addToWatchlist(movieDetails)">
-            <mat-icon>bookmark</mat-icon>
-          </button> -->
-          <button mat-icon-button class="color_button" (click)="openVideoDialog(movieDetails.TrailerLink)">
+          <button
+            mat-icon-button
+            class="color_button"
+            (click)="openVideoDialog(movieDetails.TrailerLink)"
+          >
             <mat-icon>play_arrow</mat-icon>
           </button>
         </div>
       </div>
-       <!-- Display rating circle using circle-progress component -->
+      <!-- Display rating circle using circle-progress component -->
       <div class="rating-circle">
         <circle-progress
           [percent]="movieDetails.rating * 10"
@@ -47,13 +62,20 @@
           [animationDuration]="300"
         ></circle-progress>
       </div>
-      <p>{{movieDetails.description}}</p>
-      <br>
+      <p>{{ movieDetails.description }}</p>
+      <br />
     </mat-card-content>
-     <!-- Button container for goback -->
+    <!-- Button container for goback -->
     <div class="container">
       <mat-card-actions align="end">
-        <button mat-button class="custom-primary" style="color: black;" (click)="goToback()"><mat-icon>arrow_back</mat-icon></button>
+        <button
+          mat-button
+          class="custom-primary"
+          style="color: black"
+          (click)="goToback()"
+        >
+          <mat-icon>arrow_back</mat-icon>
+        </button>
       </mat-card-actions>
     </div>
   </mat-card>
@@ -61,41 +83,46 @@
 <mat-card class="card_watchList" *ngIf="watchlist && watchlist.length > 0">
   <mat-card-title class="Title_Watch">WatchList</mat-card-title>
   <table mat-table [dataSource]="watchlist" class="mat-elevation-z8">
-
     <!-- Position Column -->
     <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
     </ng-container>
 
     <!-- Title Column -->
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef> Title </th>
-      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let element">{{ element.title }}</td>
     </ng-container>
 
     <!-- Genre Column -->
     <ng-container matColumnDef="genre">
-      <th mat-header-cell *matHeaderCellDef> Genre </th>
-      <td mat-cell *matCellDef="let element"> {{element.genre}} </td>
+      <th mat-header-cell *matHeaderCellDef>Genre</th>
+      <td mat-cell *matCellDef="let element">{{ element.genre }}</td>
     </ng-container>
 
     <!-- Release Date Column -->
     <ng-container matColumnDef="releaseDate">
-      <th mat-header-cell *matHeaderCellDef> Release Date </th>
-      <td mat-cell *matCellDef="let element"> {{element.releaseDate | date:'yyyy/MM/dd'}} </td>
+      <th mat-header-cell *matHeaderCellDef>Release Date</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.releaseDate | date : "yyyy/MM/dd" }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef style="width: 80px;"></th>
+      <th mat-header-cell *matHeaderCellDef style="width: 80px"></th>
       <td mat-cell *matCellDef="let element">
-          <button mat-icon-button style="color: #e21b1b;" (click)="removeFromWatchlist(element)">
-            <mat-icon>delete</mat-icon>
-          </button>
+        <button
+          mat-icon-button
+          style="color: #e21b1b"
+          (click)="removeFromWatchlist(element)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
       </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </mat-card>

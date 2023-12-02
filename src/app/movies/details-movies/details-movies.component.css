@@ -83,8 +83,9 @@ button {
 background-color: #f5eed4;
 color: black;
 }
-.color_button.selected-button {
-  background-color: yellow !important;
+.selected-button {
+  background-color: #e0e0e0;
+  color: #ca2020; 
 }
 
 .card_watchList{
@@ -111,6 +112,11 @@ td, th{
   .example-card {
     height: auto;
     flex-direction: column;
+    width: 70%;
+  }
+  .example-card-container{
+    display: flex;
+    justify-content: center;
   }
 
   img {
@@ -128,3 +134,4 @@ td, th{
     font-size: 14px;
   }
 }
+

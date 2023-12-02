@@ -43,7 +43,7 @@
     <!-- Display actions at the end of the card -->
     <mat-card-actions align="end">
       <!-- Add to watchlist button -->
-      <button mat-icon-button [ngClass]="{'selected-button': isInWatchlist(movie)}" style="color: #ffffff;" (click)="addToWatchlist(movie)">
+      <button mat-icon-button [ngClass]="{'selected-button': checkIfInWatchlist(movie)}" class="color_button" (click)="addToWatchlist(movie)">
         <mat-icon>bookmark</mat-icon>
       </button>
     </mat-card-actions>

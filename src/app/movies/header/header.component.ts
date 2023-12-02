@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem('userName');
+    localStorage.removeItem('userId');
     this.router.navigate(['/login']);
   }
   listMovies(){

@@ -3,7 +3,8 @@
 MoviesAPP is a web application that allows users to explore a collection of movies. The application features a login system with email and password, a main page displaying movies, filtering options by title and release date, detailed information pages for each movie, a watchlist functionality, and a watchlist table for managing saved movies.
 
 ## Features
-1. **Login System**: Users can log in using their email:<user1@example.com> and password:<Abc12345>.
+1. **Login System**: Users can log in using their email:<user1@example.com> and password: 'Abc12345'.
+email:<user2@example.com>, password:'Pass1234'
 
 2. **Main Page**: The main page displays a collection of movies.
 

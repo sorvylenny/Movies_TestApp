@@ -11,7 +11,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class VideoComponent implements OnInit {
   movies: Movies[] = [];
-  video: any = 'tg52up16eq0';
+  video: any = '';
   url: string = '';
 
   constructor(
@@ -22,9 +22,7 @@ export class VideoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Obtener la URL de data
-
-    this.url = this.data.TrailerLink.changingThisBreaksApplicationSecurity;
+    this.url = this.data.TrailerLink;
   }
   getVideoIframe(url: string) {
     var video, results;
@@ -36,7 +34,7 @@ export class VideoComponent implements OnInit {
     video = results === null ? this.url : results[1];
 
     return this._sanitizer.bypassSecurityTrustResourceUrl(
-      'https://www.youtube.com/embed/' + video 
+      'https://www.youtube.com/embed/' + video
     );
   }
 
@@ -45,4 +43,3 @@ export class VideoComponent implements OnInit {
   }
 }
 
-/*     */
