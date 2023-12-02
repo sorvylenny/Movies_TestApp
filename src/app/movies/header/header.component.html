@@ -1,0 +1,10 @@
+<mat-toolbar class="header" >
+  <mat-toolbar-row>
+    <span (click)="listMovies()"><strong style="color: white;">MoviesApp</strong></span>
+    <span class="example-spacer"></span>
+    <mat-card-content><strong style="color: white;"> {{userName}}</strong></mat-card-content>
+    <button mat-icon-button class="example-icon" style="color: white;" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

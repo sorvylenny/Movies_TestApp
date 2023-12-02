@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color:#ffffff;
+}
+
+.cardLogin{
+    max-width: 400px !important;
+    margin: 2em auto;
+    text-align: center;
+    max-height: 600px;
+    background-color:#ffffff;
+}
+
+.header{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.custom-button[disabled] {
+    background-color: rgb(228, 228, 228);
+    color: white;
+  }
+
+  .custom-button:not([disabled]) {
+    background-color: #48C9B0;
+    color: white;
+  }
+
+  @media only screen and (min-width: 375px) and (max-width: 767px) {
+    .container {
+      padding: 10px;
+    }
+
+    .cardLogin {
+      max-width: 100% !important;
+    }
+  }

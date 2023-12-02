@@ -1,0 +1,142 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #2b879e;
+  color: white;
+
+}
+.example-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 240px;
+  border-radius: 2rem;
+  border: 1px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #2b879e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.example-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 240px;
+  height: auto;
+  fill: none;
+  stroke: #e3dacb;
+  stroke-width: 1.848;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+}
+
+mat-card-title,
+mat-card-title-group,
+mat-card-subtitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'PT Serif', serif;
+  text-shadow: 0px 2px 4px rgb(0, 0, 0)
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: 'PT Serif', serif;
+}
+
+button {
+  width: 70%;
+  border-radius: 1rem;
+  color: #ffffff;
+}
+
+mat-card-header {
+  position: relative;
+}
+.rating-circle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.selected-button {
+  background-color: yellow !important;
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .example-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .example-card-container {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .rating-circle {
+    position: absolute;
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+  .example-card-container {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  img{
+    width: 100%;
+    background-position: center;
+  }
+
+  .example-card {
+    width: calc(50% - 30px);
+  }
+  mat-card-title,
+mat-card-title-group,
+mat-card-subtitle {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'PT Serif', serif;
+  text-shadow: 0px 2px 4px rgb(0, 0, 0),
+}
+
+
+
+}
+
+
+
+

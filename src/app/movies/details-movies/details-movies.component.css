@@ -1,0 +1,130 @@
+.example-card-container {
+  display: flex;
+  align-items: center;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 550px;
+  border-radius: 2rem;
+  border: 1px solid #ffffff;
+  margin-top: 50px;
+  background-color: #2b879e;
+}
+.rating-circle {
+  margin-left: 10px;
+}
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  width: 350px;
+  height: auto;
+  fill: none;
+  stroke-width: 1.848;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+mat-card-title,
+mat-card-title-group,
+mat-card-subtitle {
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'PT Serif', serif;
+}
+p{
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'PT Serif', serif;
+  color: #ffffff;
+}
+
+button {
+  width: 100%;
+  border-radius: 1rem;
+  color: #ffffff;
+}
+
+.custom-primary {
+  background-color: #f5eed4;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: auto;
+}
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.color_button{
+background-color: #f5eed4;
+color: black;
+}
+.color_button.selected-button {
+  background-color: yellow !important;
+}
+
+.card_watchList{
+  margin: 40px 20px 20px 20px;
+  background-color: #f2ecdc;
+}
+.Title_Watch{
+  margin-left: 20px;
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  color: black;
+}
+table{
+  background-color: #f2ecdc;
+}
+td, th{
+  font-family: 'PT Serif', serif;
+  font-weight: 500;
+}
+
+
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .example-card {
+    height: auto;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  mat-card-title,
+  mat-card-title-group,
+  mat-card-subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
