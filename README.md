@@ -50,10 +50,11 @@ Este proyecto utiliza las siguientes dependencias:
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2) (^11.6.16)
 
 ## Getting Started
-1. Clone the repository.
+1. Clone the repositoryv (https://github.com/sorvylenny/Movies_TestApp).
 2. Install dependencies using `npm install ` 
 3. Run the application with  `ng serve`
 4. Open the application in your browser at http://localhost:4200/.
+5. Deployed Version [Movies-app-test](https://sorvylenny.github.io/Movies_TestApp/login)
 
 ##  Usage
 1. Log in using your email and password.
