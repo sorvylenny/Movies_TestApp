@@ -26,6 +26,7 @@ import { HeaderComponent } from './movies/header/header.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    
 
   ],
   providers: [],
