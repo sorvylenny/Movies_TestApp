@@ -33,13 +33,13 @@ This project uses the following dependencies:
 
 - [RxJS: Biblioteca para programación reactiva.](https://rxjs.dev/)
   - [rxjs](https://rxjs.dev/) (~7.8.0)
-
 - [TypeScript: Superset de JavaScript que agrega tipos estáticos al lenguaje.](https://www.typescriptlang.org/)
   - [typescript](https://www.typescriptlang.org/) (~5.1.3)
 
 ## Other Dependencies
 
 - [tslib](https://www.npmjs.com/package/tslib) (^2.3.0)
+- [zone.js](https://github.com/angular/zone.js) (~0.13.0)
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2) (^11.6.16)
 
 ## Getting Started

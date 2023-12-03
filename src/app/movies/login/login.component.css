@@ -3,7 +3,7 @@
     justify-content: center;
     height: 100%;
     align-items: center;
-    background-color:#fffff8;
+    background-color:#fffff8 !important;
 }
 
 .cardLogin{
@@ -11,9 +11,8 @@
     margin: 2em auto;
     text-align: center;
     max-height: 600px;
-    background-color:#fffff8;
+    background-color:#fffff8 !important;
 }
-
 .header{
     text-align: center;
     font-family: 'PT Serif', serif;
