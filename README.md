@@ -17,11 +17,11 @@ MoviesAPP is a web application that allows users to explore a collection of movi
 
 6. **Watchlist Table**: The watchlist table includes information such as movie title, genre, release date, and provides an option to delete movies from the watchlist. The watchlist data is stored in the browser's localStorage.
 
-## Dependencias
+## Dependencies
 
-Este proyecto utiliza las siguientes dependencias:
+This project uses the following dependencies:
 
-- [Angular: Plataforma para construir aplicaciones web escalables y dinámicas.](https://angular.io/)
+- [Angular: A platform for building scalable and dynamic web applications.](https://angular.io/)
   - [@angular/animations](https://angular.io/api/animations) (^16.2.0)
   - [@angular/common](https://angular.io/api/common) (^16.2.0)
   - [@angular/compiler](https://angular.io/api/compiler) (^16.2.0)
@@ -31,23 +31,15 @@ Este proyecto utiliza las siguientes dependencias:
   - [@angular/platform-browser-dynamic](https://angular.io/api/platform-browser-dynamic) (^16.2.0)
   - [@angular/router](https://angular.io/api/router) (^16.2.0)
 
-- [Bootstrap: Marco de diseño para páginas web.](https://getbootstrap.com/)
-  - [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) (^5.3.2)
-
-- [ng-image-slider: Componente de Angular para crear sliders de imágenes.](https://www.npmjs.com/package/ng-image-slider)
-  - [ng-image-slider](https://www.npmjs.com/package/ng-image-slider) (^7.0.1)
-
 - [RxJS: Biblioteca para programación reactiva.](https://rxjs.dev/)
   - [rxjs](https://rxjs.dev/) (~7.8.0)
 
 - [TypeScript: Superset de JavaScript que agrega tipos estáticos al lenguaje.](https://www.typescriptlang.org/)
   - [typescript](https://www.typescriptlang.org/) (~5.1.3)
 
-## Otras Dependencias
+## Other Dependencies
 
 - [tslib](https://www.npmjs.com/package/tslib) (^2.3.0)
-- [zone.js](https://github.com/angular/zone.js) (~0.13.0)
-- [xlsx](https://github.com/SheetJS/js-xlsx) (^0.18.5)
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2) (^11.6.16)
 
 ## Getting Started
