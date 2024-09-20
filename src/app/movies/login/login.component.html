@@ -1,42 +1,44 @@
-<!-- Container to center the login card -->
-<div class="container">
-  <!-- Material Design card for login -->
-  <mat-card class="cardLogin">
-    <!-- Header section with "Login" text -->
-    <div class="header">
-      <span>Login</span>
-    </div>
+<div class="container-full">
+  <!-- Sección del login a la izquierda -->
+  <div class="left-side">
+    <mat-card class="cardLogin">
+      <div class="header">
+        <span>Login</span>
+      </div>
 
-    <!-- Card content containing the login form -->
-    <mat-card-content style="padding-bottom: 15px;">
-      <!-- Login form with email and password fields -->
-      <form [formGroup]="formLogin" (ngSubmit)="initSesion()">
-        <!-- Email input field -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="email" autocomplete="off">
-          <mat-icon matSuffix>mail</mat-icon>
-        </mat-form-field>
+      <mat-card-content class="pdd-btt">
+        <form [formGroup]="formLogin" (ngSubmit)="initSesion()">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" autocomplete="off">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
 
-        <!-- Password input field with a toggle button for visibility -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input [type]="hidePassword ? 'password' : 'text'" matInput formControlName="password" autocomplete="off">
-          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
-            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input [type]="hidePassword ? 'password' : 'text'" matInput formControlName="password" autocomplete="off">
+            <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <button mat-raised-button style="font-family: 'PT Serif', serif;" class="full-width custom-button"
+            type="submit" [disabled]="formLogin.invalid">
+            <mat-icon matSuffix>login</mat-icon> Login
           </button>
-        </mat-form-field>
+        </form>
+      </mat-card-content>
 
-        <!-- Login button -->
-        <button mat-raised-button style="font-family: 'PT Serif', serif;" class="full-width custom-button" type="submit" [disabled]="formLogin.invalid">
-          <mat-icon matSuffix>login</mat-icon> Login
-        </button>
-      </form>
-    </mat-card-content>
+      <mat-card-footer>
+        <mat-progress-bar mode="indeterminate" *ngIf="showLoading"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+  </div>
 
-    <!-- Card footer with a loading progress bar -->
-    <mat-card-footer>
-      <mat-progress-bar mode="indeterminate" *ngIf="showLoading"></mat-progress-bar>
-    </mat-card-footer>
-  </mat-card>
+  <!-- Sección del color en el lado derecho -->
+  <div class="right-side">
+    <div class="color-side">
+      <p>MoviesTest</p>
+    </div>
+  </div>
 </div>

@@ -1,46 +1,86 @@
-.container{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    align-items: center;
-    background-color:#fffff8 !important;
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #fffff8 !important;
 }
 
-.cardLogin{
-    max-width: 400px !important;
-    margin: 2em auto;
-    text-align: center;
-    max-height: 600px;
-    background-color:#fffff8 !important;
-}
-.header{
-    text-align: center;
-    font-family: 'PT Serif', serif;
-    font-weight: 800;
-    font-size: 20px;
-    margin-bottom: 15px;
+.container-full {
+  display: flex;
+  height: 100vh;
 }
 
-.full-width{
-    width: 100%;
+.cardLogin {
+  max-width: 400px !important;
+  margin: 2em auto;
+  text-align: center;
+  max-height: 600px;
+  background-color: #fffff8 !important;
+}
+
+.header {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2b879e;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.left-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffff8;
+}
+
+.right-side {
+  width: 50%;
+  background-color: #2b879e !important;
+  height: 100vh;
+}
+
+.color-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-family: 'PT Serif', serif;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.pdd-btt {
+  padding-bottom: 15px;
 }
 
 .custom-button[disabled] {
-    background-color: rgb(228, 228, 228);
-    color: white;
+  background-color: rgb(228, 228, 228);
+  color: white !important;
+}
+
+.custom-button:not([disabled]) {
+  background-color: #48C9B0;
+  color: white;
+}
+
+mat-icon {
+  color: #2b879e
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    padding: 10px;
   }
 
-  .custom-button:not([disabled]) {
-    background-color: #48C9B0;
-    color: white;
+  .cardLogin {
+    max-width: 100% !important;
   }
-
-  @media only screen and (min-width: 375px) and (max-width: 767px) {
-    .container {
-      padding: 10px;
-    }
-
-    .cardLogin {
-      max-width: 100% !important;
-    }
-  }
+}

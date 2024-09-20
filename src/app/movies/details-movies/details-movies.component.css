@@ -1,6 +1,11 @@
 .example-card-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .example-card {
@@ -8,7 +13,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   height: 550px;
   border-radius: 2rem;
   border: 1px solid #ffffff;
@@ -16,9 +21,11 @@
   background-color: #2b879e;
   margin-bottom: 40px;
 }
+
 .rating-circle {
   margin-left: 10px;
 }
+
 .mat-card-content {
   display: flex;
   flex-direction: column;
@@ -34,6 +41,7 @@ img {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
+
 mat-card-title,
 mat-card-title-group,
 mat-card-subtitle {
@@ -43,7 +51,8 @@ mat-card-subtitle {
   font-size: 20px;
   font-family: 'PT Serif', serif;
 }
-p{
+
+p {
   font-size: 15px;
   text-align: justify;
   font-family: 'PT Serif', serif;
@@ -57,15 +66,13 @@ button {
 }
 
 .custom-primary {
-  background-color: #f5eed4;
+  color: #ffffff !important;
+  background-color: #2b879e;
+  position: relative;
+  top: 480px;
+  right: 10px;
 }
 
-.container{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-top: auto;
-}
 .example-button-row {
   display: table-cell;
   max-width: 600px;
@@ -80,32 +87,41 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.color_button{
-background-color: #f5eed4;
-color: black;
+
+.color_button {
+  background-color: #e0e0e0;
+  color: black;
 }
+
 .selected-button {
   background-color: #e0e0e0;
   color: #ca2020;
 }
 
-.card_watchList{
+.card_watchList {
   margin: 40px 20px 20px 20px;
-  background-color: #f2ecdc;
+  background-color: #2b879e;
+  width: 65%;
 }
-.Title_Watch{
+
+.Title_Watch {
   margin-left: 20px;
   font-family: 'PT Serif', serif;
   font-weight: 700;
-  color: black;
+  color: #ffffff;
 }
-table{
-  background-color: #f2ecdc;
+
+table {
+  background-color: #2b879e;
   margin-bottom: 40px;
 }
-td, th{
+
+td, th {
   font-family: 'PT Serif', serif;
   font-weight: 500;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
 }
 
 
@@ -116,7 +132,8 @@ td, th{
     flex-direction: column;
     width: 70%;
   }
-  .example-card-container{
+
+  .example-card-container {
     display: flex;
     justify-content: center;
   }
@@ -136,4 +153,3 @@ td, th{
     font-size: 14px;
   }
 }
-

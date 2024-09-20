@@ -6,6 +6,7 @@
   color: white;
 
 }
+
 .example-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -18,14 +19,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 240px;
+  height: 42.5rem;
+  width: 300px;
   border-radius: 2rem;
   border: 1px solid #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #2b879e;
   margin-bottom: 40px;
 }
+
 .example-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -70,21 +72,23 @@ button {
 mat-card-header {
   position: relative;
 }
+
 .rating-circle {
   position: absolute;
   top: 0px;
   right: 0px;
 }
 
-.color_button{
+.color_button {
   color: #ffffff;
 }
+
 .selected-button {
   color: #ca2020;
 }
 
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .button-container {
     flex-direction: column;
   }
@@ -111,45 +115,39 @@ mat-card-header {
     position: absolute;
     margin-top: 0px;
   }
+
   mat-card-title,
-mat-card-title-group,
-mat-card-subtitle {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 12px;
-  font-family: 'PT Serif', serif;
-  text-shadow: 0px 2px 4px rgb(0, 0, 0)
-}
+  mat-card-title-group,
+  mat-card-subtitle {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'PT Serif', serif;
+    text-shadow: 0px 2px 4px rgb(0, 0, 0)
+  }
 }
 
-@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+@media (min-width: 1440px) and (max-width: 2560px) {
   .example-card-container {
     gap: 30px;
     justify-content: center;
   }
 
-  img{
+  img {
     width: 100%;
     background-position: center;
   }
 
-  .example-card {
-    width: calc(50% - 30px);
-  }
   mat-card-title,
-mat-card-title-group,
-mat-card-subtitle {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: 'PT Serif', serif;
-  text-shadow: 0px 2px 4px rgb(0, 0, 0),
-}
+  mat-card-title-group,
+  mat-card-subtitle {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'PT Serif', serif;
+    text-shadow: 0px 2px 4px rgb(0, 0, 0),
+  }
 
 
 
 }
-
-
-
-
