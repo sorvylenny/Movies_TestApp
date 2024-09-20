@@ -51,8 +51,9 @@ mat-card-subtitle {
   color: #ffffff;
   font-weight: bold;
   font-size: 15px;
-  font-family: 'PT Serif', serif;
-  text-shadow: 0px 2px 4px rgb(0, 0, 0)
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+  text-shadow: 0px 0.5px 2px rgb(0, 0, 0)
 }
 
 .mat-card-content {
@@ -60,7 +61,7 @@ mat-card-subtitle {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  font-family: 'PT Serif', serif;
+  font-family: "Merriweather", serif;
 }
 
 button {
@@ -87,6 +88,13 @@ mat-card-header {
   color: #ca2020;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: "Merriweather", serif;
+}
 
 @media (min-width: 375px) and (max-width: 767px) {
   .button-container {
@@ -122,7 +130,7 @@ mat-card-header {
     color: #ffffff;
     font-weight: bold;
     font-size: 12px;
-    font-family: 'PT Serif', serif;
+    font-family: "Merriweather", serif;
     text-shadow: 0px 2px 4px rgb(0, 0, 0)
   }
 }
@@ -144,7 +152,7 @@ mat-card-header {
     color: #ffffff;
     font-weight: bold;
     font-size: 25px;
-    font-family: 'PT Serif', serif;
+    font-family: "Merriweather", serif;
     text-shadow: 0px 2px 4px rgb(0, 0, 0),
   }
 
