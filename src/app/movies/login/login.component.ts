@@ -13,7 +13,7 @@ export class LoginComponent {
   formLogin: FormGroup;
   hidePassword: boolean = true;
   showLoading: boolean = false;
-  users: any[]=[];
+  users: any[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -56,7 +56,7 @@ export class LoginComponent {
       if (loggedInUser) {
         // If user is found, set user name to local storage, show success message, and navigate to the movie list page
         const loggedUser = loggedInUser;
-        this.loginService.setUserNameToStorage(loggedUser.userName,loggedUser.id);
+        this.loginService.setUserNameToStorage(loggedUser.userName, loggedUser.id);
 
         Swal.fire({
           icon: 'success',
@@ -72,6 +72,7 @@ export class LoginComponent {
           title: 'Error',
           text: 'Incorrect credentials',
         });
+        this.showLoading = false;
       }
     });
   }
